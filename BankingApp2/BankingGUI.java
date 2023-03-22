@@ -8,6 +8,23 @@ public class BankingGUI extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setSize(400, 300);
         setLocationRelativeTo(null);
+        
+        //menu bar
+        JMenuBar mb = new JMenuBar();
+
+        //file menu
+        JMenu mFile = new JMenu("File");
+        JMenuItem mOpen = new JMenuItem("Open");
+        JMenuItem mSaveAs = new JMenuItem("Save as");
+        mFile.add(mSaveAs);
+        mFile.add(mOpen);
+        mb.add(mFile);
+
+        setJMenuBar(mb);
+        JMenu mHelp = new JMenu("Help");
+        JMenuItem mSupport = new JMenuItem("Support Link");
+        mHelp.add(mSupport);
+        mb.add(mHelp);
 
         // Create two buttons
         JButton button1 = new JButton("Button 1");

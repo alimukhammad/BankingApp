@@ -2,6 +2,8 @@ import javax.swing.*;
 import java.awt.*;
 
 public class BankingGUI extends JFrame {
+    private JTextField unField;
+    private JTextField psField;
     
     public BankingGUI() {
         setTitle("Banking Application");
@@ -19,24 +21,25 @@ public class BankingGUI extends JFrame {
         mFile.add(mSaveAs);
         mFile.add(mOpen);
         mb.add(mFile);
-
+        //support menu
         setJMenuBar(mb);
         JMenu mHelp = new JMenu("Help");
         JMenuItem mSupport = new JMenuItem("Support Link");
         mHelp.add(mSupport);
         mb.add(mHelp);
 
-        // Create two buttons
-        JButton button1 = new JButton("Button 1");
-        JButton button2 = new JButton("Button 2");
-        
-        // Create a panel with FlowLayout manager
-        JPanel panel = new JPanel(new FlowLayout(FlowLayout.CENTER));
-        panel.add(button1);
-        panel.add(button2);
-        
-        // Add the panel to the center of the frame
-        add(panel, BorderLayout.CENTER);
+        //username label & field
+        JLabel unLabel = new JLabel("Username");
+        unField = new JTextField(20);
+        JPanel unPanel = new JPanel(new FlowLayout());
+        unPanel.add(unLabel);
+        unPanel.add(unField);
+
+
+        JPanel mainPanel = new JPanel(new GridLayout(3, 1));
+        mainPanel.add(unPanel);
+        add(mainPanel, BorderLayout.CENTER);
+
         
         setVisible(true);
     }

@@ -36,11 +36,19 @@ public class BankingGUI extends JFrame {
         unPanel.add(unField);
 
 
+        //password label & field
+        JLabel psLabel = new JLabel("Password");
+        psField = new JTextField(20);
+        JPanel psPanel = new JPanel(new FlowLayout());
+        psPanel.add(psLabel);
+        psPanel.add(psField);
+
         JPanel mainPanel = new JPanel(new GridLayout(3, 1));
         mainPanel.add(unPanel);
+        mainPanel.add(psPanel);
         add(mainPanel, BorderLayout.CENTER);
 
-        
+
         setVisible(true);
     }
     

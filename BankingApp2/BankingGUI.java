@@ -43,9 +43,15 @@ public class BankingGUI extends JFrame {
         psPanel.add(psLabel);
         psPanel.add(psField);
 
+
+        // Create panel for login button
+        JPanel loginPanel = new JPanel(new FlowLayout());
+        loginPanel.add(loginButton);
+
         JPanel mainPanel = new JPanel(new GridLayout(3, 1));
         mainPanel.add(unPanel);
         mainPanel.add(psPanel);
+        mainPanel.add(loginPanel);
         add(mainPanel, BorderLayout.CENTER);
 
 

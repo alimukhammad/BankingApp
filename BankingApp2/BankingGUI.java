@@ -35,7 +35,7 @@ public class BankingGUI extends JFrame {
                 String password = new String(passwordChars);
                 
                 // Check login credentials
-                if (username.equals("admin") && password.equals("password")) {
+                if (username.equals("sardor") && password.equals("password")) {
                     JOptionPane.showMessageDialog(BankingGUI.this, "Login successful!");
                 } else {
                     JOptionPane.showMessageDialog(BankingGUI.this, "Login failed. Please try again.");
